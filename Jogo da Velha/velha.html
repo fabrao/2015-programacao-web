@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="estilo.css">
+		
+		<title>Jogo da Velha</title>
+	</head>
+
+	<body>
+		<script src="velha.js"></script>
+		<h1>JOGO DA VELHA</h1>
+		
+		<form name="jogo">
+			<section class="tabuleiro">
+				<table>
+					<tbody>
+						<tr>
+							<td> <div class="Q11" onClick="jogadaPlayer('Q11')"> <img src="vazio.png" name="Q11" alt="Q11"/> </div> </td>
+							<td> <div class="Q12" onClick="jogadaPlayer('Q12')"> <img src="vazio.png" name="Q12" alt="Q11"/> </div> </td>
+							<td> <div class="Q13" onClick="jogadaPlayer('Q13')"> <img src="vazio.png" name="Q13" alt="Q11"/> </div> </td>
+						</tr><tr>
+							<td> <div class="Q21" onClick="jogadaPlayer('Q21')"> <img src="vazio.png" name="Q21" alt="Q11"/> </div> </td>
+							<td> <div class="Q22" onClick="jogadaPlayer('Q22')"> <img src="vazio.png" name="Q22" alt="Q11"/> </div> </td>
+							<td> <div class="Q23" onClick="jogadaPlayer('Q23')"> <img src="vazio.png" name="Q23" alt="Q11"/> </div> </td>
+						</tr><tr>
+							<td> <div class="Q31" onClick="jogadaPlayer('Q31')"> <img src="vazio.png" name="Q31" alt="Q11"/> </div> </td>
+							<td> <div class="Q32" onClick="jogadaPlayer('Q32')"> <img src="vazio.png" name="Q32" alt="Q11"/> </div> </td>
+							<td> <div class="Q33" onClick="jogadaPlayer('Q33')"> <img src="vazio.png" name="Q33" alt="Q11"/> </div> </td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section class="pontuacao">
+				<fieldset>
+					<legend>Pontuação</legend>
+						<div>Você: 		 <input type="text" size="5" name="jogador"> </div>
+						<div>Computador: <input type="text" size="5" name="computador"> </div>
+						<div>Empates: 	 <input type="text" size="5" name="empates"> </div>
+				</fieldset>
+			</section>
+		</form>
+		
+		<input type="button" value="Jogar Novamente" onclick="recomecar();">
+	</body>
+</html>
+

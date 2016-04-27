@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Exerc.3</title>
+	</head>
+	<body>
+		<form action="exerc3.html" method="POST">
+			<div>
+			<h2>Pesquisa</h2>
+				<label for="campoNome">Entre com seu nome:</label>
+				<input type="text" id="campoNome" name="nome" maxlength="10" size="20" placeholder="Informe seu nome">
+			</div>
+			
+			<div>	
+			<h2>Cidade:</h2>
+				<select>
+					<option value="0">Select your option</option>
+					<option value="1">Londrina</option>
+					<option value="2">Sertanópolis</option>
+					<option value="3">Cornélio Procópio</option>
+					<option value="4">Uraí</option>
+					<option value="5">Bandeirantes</option>
+				</select>
+			</div>
+			
+			<div>
+			<h2>Assuntos de interesse:</h2>
+				<input type="checkbox" id="a1" name="interesse[]" value="meioambiente"><label for="a1">Meio Ambiente</label><br>
+				<input type="checkbox" id="a2" name="interesse[]" value="tecnologia"><label for="a2">Tecnologia</label><br>
+				<input type="checkbox" id="a3" name="interesse[]" value="historia"><label for="a3">História</label>
+			</div>
+			
+			<div>
+			<h2>Período preferencial:</h2>
+				<input type="radio" id="p1" name="periodo" value="manha"><label for="p1">Manhã</label><br>
+				<input type="radio" id="p2" name="periodo" value="tarde"><label for="p2">Tarde</label><br>
+				<input type="radio" id="p3" name="periodo" value="noite"><label for="p3">Noite</label>
+			</div>
+			
+			<div>
+				<br><br>
+				<input type="reset" value="Limpar opções do formulário">
+				<input type="submit" value="Enviar formulário">
+			</div>
+		</form>
+	</body>
+</html>

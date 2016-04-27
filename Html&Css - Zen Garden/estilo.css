@@ -1,0 +1,194 @@
+*{
+	box-sizing: border-box;
+}
+
+html{
+	margin:auto;
+	/*margin-left:25%;*/
+	background-color: #000;
+}
+
+a:link{
+	text-decoration:none;
+	color:black;
+	text-shadow: 0px 1px rgba(56,56,56,0.6);
+}
+
+body {
+   	background-image: url('paper.jpg');
+	height:1827px;
+	width:1296px;
+	margin-top:0px;
+	margin-bottom:0px;
+	font-family:Baskerville Old Face;
+	
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+
+div.page-wrapper{
+	margin-left:20px;
+	margin-right:20px;
+	
+}
+	
+h1{
+	margin-top:40px;
+	margin-bottom:0px;
+	font-size: 130px;
+	text-align: center;
+	font-family:Algerian;
+	/*font-family: Serial Publication Regular;*/
+	/*font-family:Black Médio*/
+}
+
+h2{
+	font-size: 30px;
+	margin-top:0px;
+	text-align:center;
+	font-weight:900;
+	margin-bottom:12%;
+}
+
+div.summary{
+	text-align:center;
+	margin:0px;
+	padding:0px;
+	border-bottom:5px double #000;
+	border-top:5px double #000;
+	margin-bottom:4%;
+}
+
+div.preamble{
+	text-align: center;
+	margin-top:30px;
+	margin-bottom:60px;
+	margin-left:40px;
+	margin-right:40px;
+}
+div.preamble h3{
+	font-size: 90px;
+	margin:0px;
+}
+
+div.preamble p{
+	width:95%;
+	margin:0px;
+	margin-left:2.5%;
+	font-size: 17px;
+}
+
+#zen-supporting{
+	margin:50px;
+	margin-top:70px;
+	height:1000px;
+	font-size: 17px;
+	/*border:5px solid #00A;*/
+	
+}
+
+#zen-supporting h3{
+	font-size: 22px;
+}
+	
+div.explanation{
+	float:left;
+	border-right: 1px solid #000;
+	width:33%;
+	padding-right:15px;
+	margin-left:0px;
+	height:47%;
+	margin-bottom:60px;
+	
+}
+
+div.participation{
+	float:left;
+	border-right: 1px solid #000;
+	width:33%;
+	padding-right:15px;
+	padding-left:15px;
+	margin:0px;
+	height:47%;
+	margin-bottom:60px;
+}
+
+div.benefits{
+	float:left;
+	width:33%;
+	padding-left:15px;
+	margin:0px;
+	height:47%;
+	margin-bottom:60px;
+
+}
+
+div.requirements{
+	margin-top:40px;
+	float:left;
+	width:100%;
+	padding-left:15px;
+	margin:0px;
+	margin-bottom:60px;
+}
+
+div.requirements h3{
+	border-bottom: 1px solid #000;
+}
+
+footer{
+	float:right;
+	margin:20px;
+}
+
+div.wrapper{
+	font-size:12px;
+}
+
+div.wrapper h3{
+	margin-top:8px;
+	font-size:15px;
+}
+
+div.design-selection{
+	position:absolute;
+	top:200px;
+	left:50px;
+	border:5px double #000;
+	padding-left:10px;
+	padding-right:20px;
+	
+}
+
+div.design-archives{
+	position:absolute;
+	top:220px;
+	left:950px;
+	border:5px double #000;
+	height:135px;
+	padding-left:10px;
+	padding-right:10px;
+	border-right:0px;
+}
+
+div.zen-resources{
+	position:absolute;
+	top:220px;
+	left:1070px;
+	border:5px double #000;
+	border-left:0px;
+	padding-left:10px;
+	padding-right:20px;
+	height:135px;
+}
+
+ul{
+	padding-left:15px;
+	margin-top:6px;
+}
+li{
+	list-style-type:none;
+	}

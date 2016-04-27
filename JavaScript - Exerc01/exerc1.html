@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>exerc1</title>
+	</head>
+	
+	<body>
+		<script>
+			function produto(a, b) {
+				var mediafinal;
+				mediafinal = ((parseFloat(a)+parseFloat(b))/2);
+				
+				return mediafinal;	
+			}
+			function aprovacao(mediafinal){
+				if(mediafinal >=60){
+					return "Aprovado";
+				}else{
+					return "Reprovado";
+				}
+			}
+				
+			function calcular() {
+				var n1 = document.querySelector("[name=nota1]");
+				var n2 = document.querySelector("[name=nota2]");
+				alert(produto(n1.value, n2.value));
+				alert(aprovacao(produto(n1.value, n2.value)));
+			}
+		</script>
+		
+		<a>Nota 1</a><input type="text" name="nota1"><br>
+		<a>Nota 2</a><input type="text" name="nota2"><br>
+		<input type="button" value="Calcular" onclick="calcular()">
+		
+	</body>
+</html>	

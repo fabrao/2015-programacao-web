@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>exerc2</title>
+	</head>
+	
+	<body>
+		<script>
+			function verificaprimo(num) {
+				var contador=0;
+				for(var i=2; i<num; i++){
+					if(num % i == 0){
+						contador ++;
+					}
+				}
+				if(contador == 0){
+					return "é primo";
+				}else{
+					return "não é primo";
+				}
+			}
+				
+			function calcular() {
+				var numero = prompt("Informe um número", );
+				alert("O numero: " + numero + " " + verificaprimo(numero));
+			}
+		</script>
+		<input type="button" value="Calcular" onclick="calcular();">
+	</body>
+</html>	

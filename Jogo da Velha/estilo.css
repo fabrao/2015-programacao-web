@@ -1,0 +1,91 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	margin:auto;
+}
+
+
+body  {
+	width:640px;
+	height:98%;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	text-align:center;
+}
+
+h1 {
+	font-size:76px;
+	margin-top:5px;
+	margin-bottom:40px;
+}
+
+img {
+	border:0px;
+	height:100px;
+	width:100px;
+}	
+
+div.Q12 {
+	border: 7px solid #000;
+	border-top: 0px;
+	border-bottom:0px;
+}
+
+div.Q22 {
+	border: 7px solid #000;
+
+}
+
+div.Q32 {
+	border: 7px solid #000;
+	border-bottom: 0px;
+	border-top:0px;
+}
+
+div.Q21 {
+	border: 7px solid #000;
+	border-left: 0px;
+	border-right: 0px;
+}
+
+div.Q23 {
+	border: 7px solid #000;
+	border-left: 0px;
+	border-right: 0px;
+}
+
+fieldset {
+	margin-top:10px;
+	width:100%;
+	margin-bottom:10px;
+}
+
+fieldset div {
+	float:left;
+	width:33%;
+	margin: 0px;
+	border: 0px;
+}
+
+section.tabuleiro {
+	margin-left:25%;
+}
+
+section.pontuacao{
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+input[type="button"]{
+	width:150px;
+	height:40px;
+}
+
+	
+
+	
