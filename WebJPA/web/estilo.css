@@ -1,0 +1,76 @@
+*{
+	box-sizing: border-box;
+}
+
+html{
+	margin:auto;
+}
+
+
+#img{
+	height:170px;
+	width:170px;
+	margin-left:40%;
+}
+
+#contato{
+    width: 40%;
+    float: left;
+}
+
+#logout{
+    width: 40%;
+    float: right;
+}
+
+
+body {
+	width:800px;
+        height: 100%;
+	margin-top:0px;
+	margin-bottom:0px;
+	font-family:Baskerville Old Face;
+	
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	text-align:center;
+}
+
+h1{
+	font-size:60px;
+}
+
+header{
+    height: 40px;        
+}
+
+li{
+ text-align: left;
+ }
+ 
+ 
+#table{
+
+     text-align: center;
+     margin-left: 15%;
+     margin-right: 15%;
+ }
+ 
+ table{
+
+     width: 100%;
+ }
+ 
+ th{
+     background: rgb(150,150,150);
+ }
+ td{
+     border: 1px dotted black;
+ }
+ 
+ #divEdit{
+     
+ }
