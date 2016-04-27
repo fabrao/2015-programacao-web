@@ -1,0 +1,110 @@
+* {
+	box-sizing: border-box;
+}
+
+#main {
+	min-width: 500px;
+}
+
+*.container { 
+	width: 100%;
+	border: 1px solid black;
+}
+
+header {
+	background: #AAA;
+	border-radius: 10px;
+	height: 35px;
+	
+}
+a{
+	color:black;
+}
+a:first-child{
+	color:blue;
+}
+a:last-child{
+	color:blue;
+}
+
+
+h1 {
+	color: white;
+	float: left;
+	margin: 0px;
+	line-height: 35px;
+	margin-left: 10px;
+}
+
+nav {
+	float: right;
+	margin-top: 8px;
+	margin-right: 10px;
+
+}
+			
+footer {
+	margin-top: 30px;
+	border-top: 2px solid #000;
+	padding-top: 5px;
+	text-align: center;
+}
+			
+div.row {
+	margin-bottom: 10px;
+	height: 250px;
+
+}
+
+
+*.menu {
+	width: 30%;
+	border: 2px solid #AAA;
+	border-radius: 5px;
+	height: 100%;
+	margin: 0px;
+	float: left;
+	margin-top: 10px;
+}
+
+nav.menu {
+	background: blue;
+
+}
+
+aside.menu {
+	background: green;
+}
+
+div.content {
+	float: left;
+	width: 70%;
+	height: 100%;
+}
+
+div.borda {
+	border: 2px solid #000;
+	background: #FFF;
+	margin-left: 1%;
+}
+
+div.terco {
+	margin-top: 10px;
+	width: 32.3%;
+	float: left;
+	height: 48%;
+}
+
+div.full {
+	margin-top: 7px;
+	float: left;
+	width: 98.8%;
+	height: 48%;
+}
+
+div.doisterco{
+	width:65.5%;
+	height: 100%;
+	float: left;
+	margin-top: 10px;
+}
