@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<ui:composition template="templates/templatelogin.xhtml"
+                    xmlns="http://www.w3.org/1999/xhtml"
+                    xmlns:c="http://java.sun.com/jsp/jstl/core"
+                    xmlns:ui="http://java.sun.com/jsf/facelets"
+                    xmlns:h="http://java.sun.com/jsf/html"
+                    xmlns:f="http://java.sun.com/jsf/core">
+    <ui:param name="pageTitle" value="Blog - ${txt['REGISTER']}"/>
+    <ui:param name="titleHeader" value="${txt['REGISTER']}"/>
+    
+    <ui:define name="link">
+        <c:choose>
+            <c:when test="#{usuarioMB.logado}">
+                <h:form id="formHeader">
+                    <h:commandLink value="${txt['HOME']}" action="#{blogMB.entraBlog(usuarioMB.usuario)}"/>
+                    <h:commandLink value="${txt['REGISTER']}" action="#{navigationRules.cadastrar()}"/>
+                    <h:commandLink value="${txt['INSERT']} Post" action="#{navigationRules.inserirPost()}"/>
+                    <h:commandLink value="${txt['LOGOUT']}" action="#{usuarioMB.logout()}"/>
+                </h:form>
+            </c:when>
+            <c:otherwise>
+                <h:link value="${txt['LOGIN']}" outcome="login"/>
+            </c:otherwise>
+        </c:choose>        
+    </ui:define>
+                
+    <ui:define name="principal">
+        
+        <h:form id="formCadastro">
+            <h:panelGrid columns="2" id="tableCadastro">
+                <h:outputLabel for="Login" value="${txt['LOGIN']}: "/>
+                <h:inputText id="login"  label="Login" value="#{cadastraMB.usuario.login}" required="true">
+                    <f:validateLength minimum="5" maximum="20"/>
+                </h:inputText>
+               
+                <h:outputLabel for="Senha" value="${txt['PASSWORD']}: "/>
+                <h:inputSecret id="senha" label="Senha" value="#{cadastraMB.usuario.senha}" required="true">
+                    <f:validateLength minimum="6" maximum="14"/>
+                </h:inputSecret>
+               
+                <h:outputLabel for="ConfirmaSenha" value="${txt['CHECK']} ${txt['PASSWORD']}: "/>
+                <h:inputSecret id="confirma" label="ConfirmaSenha" value="#{cadastraMB.senha}" required="true">
+                    <f:validateLength minimum="6" maximum="14"/>
+                </h:inputSecret>
+                
+                <h:outputLabel for="Nome" value="${txt['NAME']}: "/>
+                <h:inputText id="nome" label="Nome" value="#{cadastraMB.usuario.nome}" required="true">
+                    <f:validateLength minimum="8" maximum="50"/>
+                </h:inputText>
+                </h:panelGrid><br/>
+                <h:commandButton id="btcadastrar" value="${txt['REGISTER']}" action="#{cadastraMB.cadastraUsuario()} #{listaMB.atualiza()}"/>
+            
+        </h:form>
+        <h:messages id="msgErro"/>  
+    </ui:define>
+</ui:composition>
+

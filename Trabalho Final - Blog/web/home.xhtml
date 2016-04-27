@@ -1,0 +1,36 @@
+<ui:composition template="templates/template.xhtml"
+                    xmlns="http://www.w3.org/1999/xhtml"
+                    xmlns:c="http://java.sun.com/jsp/jstl/core"
+                    xmlns:ui="http://java.sun.com/jsf/facelets"
+                    xmlns:h="http://java.sun.com/jsf/html"
+                    xmlns:f="http://java.sun.com/jsf/core">
+    
+    <ui:param name="pageTitle" value="#{usuarioMB.usuario.login}'s Blog"/>
+    <ui:param name="titleHeader" value ="Blog - #{usuarioMB.usuario.login}"/>
+    
+    <ui:define name="principal">
+        <h:form id="formHome" enctype="multipart/form-data">
+            <div>
+                <h:outputLabel id="tituloLabel" for="titulo" value="${txt['TITLE']} ${txt['OF']} Post"/><br/>
+                <h:inputText id="titulo" label="titulo" value="#{submissaoMB.post.titulo}" required="true" size="90">
+                <f:validateLength minimum="2" maximum="150"/>
+                </h:inputText><br/><br/>
+           </div>
+            <div>
+                <h:outputLabel id="imagemLabel" for="imagem" value="${txt['INSERT']} ${txt['IMAGE']}"/><br/>
+                <h:inputFile id="imagem" label="imagem" value="#{submissaoMB.imagem}"/>
+            </div>
+           <div>
+                <h:outputLabel id="postLabel" for="post" value="${txt['POSTCONTENT']}: "/><br/>
+                <h:inputTextarea id="post" label="post" value="#{submissaoMB.post.conteudo}" required="true"  cols="100" rows="8"/>
+           </div>
+                <br/>
+                <h:commandButton id="postar" value="${txt['POSTING']}" action="#{submissaoMB.inserePost(usuarioMB.usuario)}"> 
+                </h:commandButton> 
+        </h:form>
+        <h:messages id="msg"/>
+
+    </ui:define>
+    
+</ui:composition>
+

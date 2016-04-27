@@ -1,0 +1,171 @@
+*{
+    box-sizing: border-box;
+        
+}
+
+select{
+    width: 400px;
+}
+nav{
+    position:fixed;
+    float:left;
+    right:92%;
+    top:15%;
+    width: 110px;
+    font-weight: bold;
+    border:2px dotted grey;
+    padding-bottom: 10px;
+    background: rgba(63,76,107,1);
+    
+}
+
+
+
+input{
+    
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+html{
+
+    margin:auto;
+}
+
+#formLogin{
+    margin:auto;
+    height:170px;
+    width:260px;
+}
+#formHome{
+    width: 100%;
+}
+#gridHome{
+    width: 600px;
+}
+
+#gridLoginSenha{
+    margin:0px;
+}
+
+
+
+table{
+    margin-left: 34%;
+    text-align: right;
+}
+#formCadastro{
+    margin:auto;
+}
+tbody{
+    
+    width: 600px;
+}
+
+#post{
+    max-width:400px;
+   width:400px;
+ 
+   height:100px;
+   max-height:300px;
+}
+div.post{
+    color:white;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: large;
+    margin-bottom: 20px;
+}
+h5{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    color:white;
+    
+}
+#formHeader a{
+    color:white;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+#img{
+	height:170px;
+	width:170px;
+	margin-left:40%;
+}
+
+label{
+    color:white;
+}
+
+a{
+    color: white;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+h2{
+    border-top:2px dotted dimgrey;
+    font-size: xx-large;
+    color:greenyellow;
+    margin-bottom: 10px;
+    margin-top: 60px;
+
+}
+
+div.corpocomentario{
+    color:lightgray;
+}
+
+div.comentario{
+    padding-left: 20%;
+    padding-right: 20%;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+
+
+body {
+	//width:800px;
+        height: 100%;
+	margin-top:0px;
+	margin-bottom:0px;
+	font-family:Baskerville Old Face;
+	
+	//position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	text-align:center;
+        background: rgba(63,76,107,1);
+}
+
+h1{
+    color:greenyellow;
+    font-weight: bold;
+    font-size:80px;
+    
+}
+h3{
+    color:greenyellow;
+}
+header{
+    height: 40px;        
+}
+
+li{
+ text-align: left;
+ }
+ 
+ #msg{
+     padding-left: 25%;
+     color:goldenrod;
+     font-weight: inherit;
+    
+ }
+ #msgErro{
+     padding-left: 47%;
+     font-weight: inherit;
+     color: orangered;
+ }

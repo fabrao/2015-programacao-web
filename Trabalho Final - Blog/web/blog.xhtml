@@ -1,0 +1,76 @@
+<ui:composition template="templates/template.xhtml"
+                    xmlns="http://www.w3.org/1999/xhtml"
+                    xmlns:c="http://java.sun.com/jsp/jstl/core"
+                    xmlns:ui="http://java.sun.com/jsf/facelets"
+                    xmlns:h="http://java.sun.com/jsf/html"
+                    xmlns:f="http://java.sun.com/jsf/core"
+                    xmlns:p="http://primefaces.org/ui">
+
+    <ui:param name="pageTitle" value="#{blogMB.usuario.login}'s Blog "/>
+    <ui:param name="titleHeader" value="Blog - #{blogMB.usuario.login}"/>
+    <ui:define name="principal">
+        <h:form id="formBlog">
+          
+                <h:outputLabel for="post" id="labelp" value="Post: "/>
+                <h:selectOneMenu label="post" id="selectfile" value="#{comentariosMB.comentario.post.id}" required="true" >
+                    <f:selectItems value="#{blogMB.posts}" var="p" itemValue="#{p.id}" itemLabel="#{p.titulo}" id="selectvalue" />
+                </h:selectOneMenu><br/><br/>
+                
+                <h:outputLabel id="labelcomentario" for="comentario" value="${txt['COMMENT']}: "/><br/>
+                <h:inputTextarea label="comentario" id="textoComentario" required="true" value="#{comentariosMB.comentario.comentario}" cols="60" rows="4" />
+                <br/><br/>
+                <h:commandButton action="#{comentariosMB.enviaComentario(usuarioMB.usuario)}" id="comentariobotao" value="${txt['SEND']}">
+                </h:commandButton>
+          
+        </h:form>
+        <h:messages id="msg"/>
+        <h:panelGroup id="renderiza">
+            <ui:repeat value="#{blogMB.posts}" var="post">
+                <h2>
+                #{post.titulo}
+                </h2>
+                <h5>
+                    <h:outputText value="#{post.dia}">
+                        <f:convertDateTime pattern="dd/M/yyyy"/>
+                    </h:outputText>
+                    ${txt['AT']}
+                    <h:outputText value="#{post.dia}">
+                        <f:convertDateTime pattern="H:mm"/>
+                    </h:outputText>
+                </h5>
+                <div id="imagem">
+                    <h:form>
+                        <p:commandButton value="Imagem - #{post.titulo}" ajax="false">
+                            <p:fileDownload value="#{blogMB.retornaImagem(post)}"/>
+                        </p:commandButton>
+                    </h:form>
+                </div>
+                <br/>
+                <div class="post">
+                    #{post.conteudo}
+                </div>
+                
+                <ui:repeat value="#{blogMB.retornaComentario(post)}" var="comentario" id="listaComentarios">
+                    <div class="corpocomentario">
+                        <div class="headercomentario">
+                        <b>#{comentario.usuariocoment.login}</b>
+                         ${txt['COMMENTED']} ${txt['IN']}
+
+                            <h:outputText value="#{comentario.dia}">
+                                <f:convertDateTime pattern="dd/M/yyyy"/>
+                            </h:outputText>
+                            ${txt['AT']}
+                            <h:outputText value="#{comentario.dia}">
+                                <f:convertDateTime pattern="H:mm"/>
+                            </h:outputText>
+                        </div>
+
+                        <div class="comentario">
+                            #{comentario.comentario}
+                        </div>
+                    </div>
+                </ui:repeat>
+            </ui:repeat>
+            </h:panelGroup>
+    </ui:define>
+</ui:composition>
